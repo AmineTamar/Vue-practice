@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <link rel="stylesheet" href="style.css">
+ 
+</head>
+<script type="importmap">
+    {
+      "imports": {
+        "vue": "https://unpkg.com/vue@3/dist/vue.esm-browser.js"
+      }
+    }
+  </script>
+  
+  <div id="app">
+<input type="text" name="" id="" v-model="message">
+    
+    {{ message }}
+
+<p :class="message">sadasdsaasda</p>
+
+</div>
+  
+  <script type="module">
+    import { createApp, ref } from 'vue'
+  
+    createApp({
+      setup() {
+        const message = ref('Vbind')
+        return {
+          message
+        }
+      }
+    }).mount('#app')
+  </script>
+</html>
