@@ -6,6 +6,8 @@
     <title>Document</title>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+
  
 </head>
 <script type="importmap">
@@ -17,11 +19,15 @@
   </script>
   
   <div id="app">
+
+    <h1 class="text-3xl font-bold underline">
+        Hello world!
+      </h1>
 <input type="text" name="" id="" v-model="message">
     
     {{ message }}
 
-<p :class="message">sadasdsaasda</p>
+ <button class="bg-red-600 h-16 w-9" v-on:click="count++">{{count}} </button>
 
 </div>
   
@@ -30,11 +36,18 @@
   
     createApp({
       setup() {
-        const message = ref('Vbind')
+        const count = ref(0)
+        const message = ref("hello")
         return {
+          count ,
           message
         }
-      }
-    }).mount('#app')
+      } 
+      
+
+    
+       
+
+    }).mount('#app') 
   </script>
 </html>
